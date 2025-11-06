@@ -1,0 +1,69 @@
+// owner id 690b07682769c649b2a65e22
+POST http://localhost:3001/login HTTP/1.1
+content-type: application/json
+
+{
+  "password": "james",
+  "email": "james@gmail.com"
+}
+
+###
+
+POST http://localhost:3001/login HTTP/1.1
+content-type: application/json
+
+{
+  "password": "jamboooo",
+  "email": "jamboooo@example.com"
+}
+
+###
+
+POST http://localhost:3001/signUp HTTP/1.1
+content-type: application/json
+
+{
+  "name": "james",
+  "password": "james",
+  "email": "james@gmail.com"
+}
+
+###
+
+POST http://localhost:3001/createEvent
+Headers:
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIxOTBiYzk1OGY2MWRmNDliZjE1NSIsImVtYWlsIjoiamFtZXNAZ21haWwuY29tIiwiaWF0IjoxNzYyMzM1MTkyLCJleHAiOjE3NjI5Mzk5OTJ9.04IuSoxgZaPMh1u8wJ0wmKzmBfT5pfqeWK6Yr_pcC7c
+
+{
+  "title": "Gym Slot",
+  "startTime": "2025-11-06T10:00:00.000Z",
+  "endTime": "2025-11-06T11:00:00.000Z",
+  "status": "BUSY"
+}
+
+###
+
+PUT  http://localhost:3001/690b0ca4a32cf178f12c654a
+Headers:
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIwNzY4Mjc2OWM2NDliMmE2NWUyMiIsImVtYWlsIjoiamFtYm9vb29AZXhhbXBsZS5jb20iLCJpYXQiOjE3NjIzMzE3MTQsImV4cCI6MTc2MjkzNjUxNH0.YAXm_ubUXXIkOeqErVBP6UkXmbtxwLxpbBhQ5SevRJk
+
+{
+  "title": "Gym Slotting",
+  "startTime": "2025-11-06T10:00:00.000Z",
+  "endTime": "2025-11-06T11:00:00.000Z",
+  "status": "SWAPPABLE"
+}
+
+### 
+GET   http://localhost:3001/getSwappables
+Headers:
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIxOTBiYzk1OGY2MWRmNDliZjE1NSIsImVtYWlsIjoiamFtZXNAZ21haWwuY29tIiwiaWF0IjoxNzYyMzM1MTkyLCJleHAiOjE3NjI5Mzk5OTJ9.04IuSoxgZaPMh1u8wJ0wmKzmBfT5pfqeWK6Yr_pcC7c
+
+### 
+DELETE    http://localhost:3001/690b0ca4a32cf178f12c654a
+Headers:
+  Content-Type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGIwNzY4Mjc2OWM2NDliMmE2NWUyMiIsImVtYWlsIjoiamFtYm9vb29AZXhhbXBsZS5jb20iLCJpYXQiOjE3NjIzMzU5NjAsImV4cCI6MTc2Mjk0MDc2MH0.x2H3H-TypqxXrhp-UJnLNpTlcC-TqI1RrJOOtOVG9xk
