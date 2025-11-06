@@ -38,7 +38,7 @@ Installation
 Clone the repo
 
 
-git clone https://github.com/yourusername/SlotSwapperr.git
+git clone https://github.com/JarmanKingra/SlotSwapperr.git
 cd SlotSwapper
 
 
