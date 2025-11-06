@@ -5,6 +5,7 @@ import cors from 'cors';
 dotenv.config();
 import authRoutes from "./src/Routes/auth.js";
 import eventRoutes from "./src/Routes/events.js"
+import swapRoutes from "./src/Routes/swap.js"
 
 dotenv.config();
 const MONGO_URI = process.env.MONGO_URI;
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded({limit: "40kb", extended: true}));
 app.use(authRoutes)
 app.use(eventRoutes)
+app.use(swapRoutes)
 
 
 app.get("/", (req, res) => {

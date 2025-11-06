@@ -1,8 +1,8 @@
 import Event from "../Models/event.js";
 
 const getEvent = async(req, res) => {
-    const events = await Event.find({owner: req.user._id}).sort({startTime: 1})
-    res.json(events);
+    const events = await Event.find({owner: req.user._id})
+    res.json({events});
 };
 
 const createEvent = async(req, res) => {
@@ -46,4 +46,9 @@ const getSwappableSlots = async(req, res) => {
     res.json(slots);
 }
 
-export {getEvent, createEvent, updateEvent, deleteEvent, getSwappableSlots};
+const getMySwappableSlots = async(req, res) => {
+    const slots = await Event.find({status : 'SWAPPABLE', owner: req.user._id}).populate('owner', 'name email');
+    res.json(slots);
+}
+
+export {getEvent, createEvent, updateEvent, deleteEvent, getSwappableSlots, getMySwappableSlots};
